@@ -113,6 +113,14 @@ if (strlen($customerFirstName) > 6) {
 /* MY DEBUGGING LOG:
 Problem: In Part A, avoiding compound operators meant I had to nest the XL check inside the customization check. Initially, I accidentally put the baseline $5.00 custom text fee inside the XL block, which meant standard shirts weren't getting charged the base custom fee.
 Solution: I carefully traced the brackets to ensure the $5.00 fee executed immediately when $isCustomized was true, while the extra $3.00 was deeply nested to only hit XL sizes. In Part B, using the '&&' operator completely eliminated this nesting confusion.
+
+Problem: Initially I could not find the path to this file. I included additional code in the
+web.php file to display the price_engine.php code in the browser.
+Solution: Route::get('/module2a/price_engine_refactored.php', function () {
+require base_path('module2a/price_engine_refactored.php');
+});
+This code redirected Herd to change paths from "routes/web.php" to
+"module2a/price_engine_refactored.php"
 */
 
 ////////////////////////////////////////////////////////
