@@ -79,10 +79,8 @@ require base_path('module2a/price_engine_refactored.php');
 });
 This code redirected Herd to change paths from "routes/web.php" to
 "module2a/price_engine_refactored.php"
+Example rule was really helpful to write the rat of the conditions.
 */
-
-////////////////////////////////////////////////////////
-
             // --- DO NOT EDIT BELOW THIS LINE ---
             echo "<ul>" . $details . "</ul>";
             echo "<ul><li><span class='total'>Final Price:</span> <span class='total'>$" . number_format($finalPrice, 2) . "</span></li></ul>";
