@@ -37,7 +37,7 @@
 $finalPrice = 22.50;
 $details = "<li>Base Price: <span>$" . number_format($finalPrice, 2) . "</span></li>";
 
-// 1. Size Upcharges
+// 1. Size Upcharges, each condition needs an if.
 if ($size == 'L') {
     $finalPrice = $finalPrice + 1.75;
     $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
@@ -68,14 +68,17 @@ if ($isCustomized == true) {
     }
 }
 
-// 4. Personalized Discount (Using Bezzzzzzz as an example - 9 letters)
+// 4. Personalized Discount (Using BehzadABCDEFG as an example - 9 letters)
+// Both long name and short name was tested and successful.
 $nameLength = strlen($customerFirstName);
 if ($nameLength > 6) {
     $finalPrice = $finalPrice - 1.00;
     $details .= "<li>Long Name Discount: <span>-$1.00</span></li>";
 }
-
-////////////////////////////////////////////////////////
+/* DEBUGGING LOG:
+$details diplay HTML tags, the concatanation operator (.) is used between quotation marks.
+Provided snippet example assisted with coding each condition.  Each condition is displayed in order from top to bottom.
+*/
 
             // --- DO NOT EDIT BELOW THIS LINE ---
             echo "<ul>" . $details . "</ul>";
