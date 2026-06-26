@@ -1,3 +1,10 @@
+<!--
+Behzad Ghabaei 
+CS 85 - PHP
+Module 2A 
+Instructor Seno 
+6/25/2026
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +30,7 @@
             $customerFirstName = 'Behzzzzzad'; // <-- IMPORTANT: REPLACE WITH YOUR ACTUAL FIRST NAME
 
             // --- Part A: Implement the logic below using ONLY simple, nested if-statements ---
-            $finalPrice = 22.50;
+            $finalPrice = 22.50;  //this can be removed.
             $details = "<li>Base Price: <span>$" . number_format($finalPrice, 2) . "</span></li>";
 
             // Your nested if-statement logic goes here...
@@ -37,7 +44,7 @@
 $finalPrice = 22.50;
 $details = "<li>Base Price: <span>$" . number_format($finalPrice, 2) . "</span></li>";
 
-// 1. Refactored Size Upcharges
+// 1. Refactored Size Upcharges. Curly braces used after condition.
 if ($size == 'L') {
     $finalPrice += 1.75;
     $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
@@ -46,13 +53,15 @@ if ($size == 'L') {
     $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
 }
 
-// 2. Refactored Premium Color Upcharge (Using OR operator)
+// 2. Refactored Premium Color Upcharge (Using OR operator).  OR -> T = F || T.
+// <li> indicate HTML list tags to display.
 if ($color == 'Sunset Orange' || $color == 'Ocean Blue') {
     $finalPrice += 2.00;
     $details .= "<li>Premium Color ($color) Upcharge: <span>+$2.00</span></li>";
 }
 
 // 3. Refactored Customization Rules (Using AND operator to flatten code)
+// additional charge for custom handling T -> T && T.
 if ($isCustomized) {
     $finalPrice += 5.00;
     $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
@@ -63,6 +72,7 @@ if ($isCustomized && $size == 'XL') {
 }
 
 // 4. Personalized Discount
+// Testing on short names and longer names. 
 if (strlen($customerFirstName) > 6) {
     $finalPrice -= 1.00;
     $details .= "<li>Long Name Discount: <span>-$1.00</span></li>";
