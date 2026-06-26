@@ -32,49 +32,7 @@
             //     $finalPrice = $finalPrice + 1.75;
             //     $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
             // }
-//////////////////////////////////////////////////////////
-// --- Part A: Implement the logic below using ONLY simple, nested if-statements ---
-/*$finalPrice = 22.50;
-$details = "<li>Base Price: <span>$" . number_format($finalPrice, 2) . "</span></li>";
 
-// 1. Size Upcharges
-if ($size == 'L') {
-    $finalPrice = $finalPrice + 1.75;
-    $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
-}
-if ($size == 'XL') {
-    $finalPrice = $finalPrice + 2.50;
-    $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
-}
-
-// 2. Premium Color Upcharge
-if ($color == 'Sunset Orange') {
-    $finalPrice = $finalPrice + 2.00;
-    $details .= "<li>Premium Color Upcharge: <span>+$2.00</span></li>";
-}
-if ($color == 'Ocean Blue') {
-    $finalPrice = $finalPrice + 2.00;
-    $details .= "<li>Premium Color Upcharge: <span>+$2.00</span></li>";
-}
-
-// 3. Customization & Handling Rules (Nested to handle the XL condition without &&)
-if ($isCustomized == true) {
-    $finalPrice = $finalPrice + 5.00;
-    $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
-    
-    if ($size == 'XL') {
-        $finalPrice = $finalPrice + 3.00;
-        $details .= "<li>XL Custom Handling Fee: <span>+$3.00</span></li>";
-    }
-}
-
-// 4. Personalized Discount (Using Bezzzzzzz as an example - 9 letters)
-$nameLength = strlen($customerFirstName);
-if ($nameLength > 6) {
-    $finalPrice = $finalPrice - 1.00;
-    $details .= "<li>Long Name Discount: <span>-$1.00</span></li>";
-}
-*/
 // --- Part B: Refactored Logic using compound operators and elseif ---
 $finalPrice = 22.50;
 $details = "<li>Base Price: <span>$" . number_format($finalPrice, 2) . "</span></li>";
